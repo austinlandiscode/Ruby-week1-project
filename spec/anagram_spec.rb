@@ -1,9 +1,12 @@
 require('rspec')
-require('anagram')
 require('pry')
+require('anagram')
 
-describe('AnagramSolver#anagram_checker') do
-  it("checks if the 'word1' and 'shore' inputs share the same characters") do
-    expect(anagram_checker("horse","shore")).to(eq(true))
+describe(Anagram) do
+  describe('#words') do
+    it("checks the values of new AA instances") do
+      input = Anagram.new("horse", "shore")
+      expect(input.Anagram()).to(eq("horse", "shore"))
+    end
   end
 end
