@@ -9,4 +9,10 @@ describe(Anagram) do
       expect(input.Anagram()).to(eq("horse", "shore"))
     end
   end
+
+  describe('#vowel_checker') do
+    it('checks to see if inputed string contains a vowel or y') do
+      expect(Anagram.vowel_checker("plpp")).to(eq(false))
+      expect(Anagram.vowel_checker("plop")).to(eq(true))
+  end
 end
